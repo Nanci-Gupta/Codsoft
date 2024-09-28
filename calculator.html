@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <link rel="shortcut-icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background:linear-gradient(45deg,rgb(18, 17, 17),rgb(78, 80, 80));
+        }
+        .parent{
+            padding: 40px;
+            border-radius:25px;
+            box-shadow:0px 3px 35px  rgb(164, 165, 163) ;
+            border: 1px white solid;
+        }
+        .in{
+            margin: 20px 2px;
+            padding: 11px 5px;
+            width: 100%;
+            background-color: transparent;
+            box-shadow:1px 5px -1px ;
+            text-align: right;
+            font-size:25px ;
+            color:white;
+        }
+        .in::placeholder{
+            color:white;
+            font-size: 25px;
+        }
+       
+        .btn{
+            border:none;
+           font-size: 25px;
+           border-radius: 250px;
+            width: 60px;
+            height: 60px;
+            margin:10px 10px;  
+          background-color:transparent;
+          box-shadow: -5px -2px 20px rgba(255, 255, 255, 0.325);
+          cursor: pointer;
+          border:1px solid gray ;
+          color:white;
+        }
+        .ab{
+            color:rgb(255, 255, 255);
+        }
+        .class1 input{
+            color: rgb(255, 255, 255);
+            /* width: 100%; */
+        }
+        .hi{
+            background-color:rgb(250, 104, 0);
+            border:none;
+           font-size: 25px;
+           border-radius: 250px;
+            width: 60px;
+            height: 60px;
+            margin:10px 10px;  
+            box-shadow: -5px -2px 20px rgba(255, 255, 255, 0.325);
+          cursor: pointer;
+          border:1px solid gray ;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <form action="" id="display">
+            <input type="text" name="" id="show" class="in" placeholder="0">
+            <div class="class1">
+                <input type="button" id="sym" class="btn" value="AC" onclick="display.show.value=' '">
+                <input type="button" id="sym" class="btn" value="DEL" onclick="display.show.value=display.show.value.tostring().slice(0,-1)">
+                <input type="button" id="sym" class="btn" value="/" onclick="display.show.value+='/'">
+                <input type="button"id="sym" name="" class="btn" value="%"  onclick="display.show.value +='%'">
+            </div>
+            <div >
+                <input type="button" name="" class="btn" value="7"  onclick="display.show.value +='7'">
+                <input type="button" name="" class="btn" value="8"  onclick="display.show.value +='8'">
+                <input type="button" name="" class="btn" value="9"  onclick="display.show.value +='9'">
+                <input type="button" id="sym"name="" class="btn" value="*"  onclick="display.show.value +='*'">
+
+       
+    </div>
+    <div >
+        <input type="button" name="" class="btn" value="4"  onclick="display.show.value +='4'">
+        <input type="button" name="" class="btn" value="5"  onclick="display.show.value +='5'">
+        <input type="button" name="" class="btn" value="6"  onclick="display.show.value +='6'">
+        <input type="button"id="sym" name="" class="btn" value="-"  onclick="display.show.value +='-'">
+
+       
+    </div>
+
+    <div >
+        <input type="button"  name="" class="btn" value="1" onclick="display.show.value +='1'">
+        <input type="button" name="" class="btn" value="2" onclick="display.show.value +='2'">
+        <input type="button" name="" class="btn" value="3" onclick="display.show.value +='3'">
+        <input type="button" id="sym"name="" class="btn" value="+"  onclick="display.show.value +='+'">
+
+        
+    </div>
+    <div >
+        <input type="button" name="" class="btn" value="00"  onclick="display.show.value +='00'">
+        <input type="button" name="" class="btn" value="0"  onclick="display.show.value +='0'">
+        <input type="button" id="sym" name="" class="btn" value="."  onclick="display.show.value +='.'">
+
+        <input type="button" id="equal"  name="" class="hi" value="="  onclick="display.show.value =eval(display.show.value)">
+        
+        
+    </div>
+    </form>
+    
+</div>
+</body>
+</html>
